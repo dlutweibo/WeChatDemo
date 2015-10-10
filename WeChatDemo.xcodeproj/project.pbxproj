@@ -7,26 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6433D381BC9075E00864680 /* TabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6433D271BC9075E00864680 /* TabbarController.m */; settings = {ASSET_TAGS = (); }; };
 		D6F1C97C1BC7E763007B0C7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F1C97B1BC7E763007B0C7F /* main.m */; };
 		D6F1C97F1BC7E763007B0C7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F1C97E1BC7E763007B0C7F /* AppDelegate.m */; };
-		D6F1C9821BC7E763007B0C7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F1C9811BC7E763007B0C7F /* ViewController.m */; };
 		D6F1C9851BC7E763007B0C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F1C9831BC7E763007B0C7F /* Main.storyboard */; };
 		D6F1C9881BC7E763007B0C7F /* WeChatDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6F1C9861BC7E763007B0C7F /* WeChatDemo.xcdatamodeld */; };
 		D6F1C98A1BC7E763007B0C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F1C9891BC7E763007B0C7F /* Assets.xcassets */; };
-		D6F1C98D1BC7E763007B0C7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F1C98B1BC7E763007B0C7F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6433D261BC9075E00864680 /* TabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarController.h; sourceTree = "<group>"; };
+		D6433D271BC9075E00864680 /* TabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarController.m; sourceTree = "<group>"; };
 		D6F1C9771BC7E763007B0C7F /* WeChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChatDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F1C97B1BC7E763007B0C7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6F1C97D1BC7E763007B0C7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6F1C97E1BC7E763007B0C7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D6F1C9801BC7E763007B0C7F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D6F1C9811BC7E763007B0C7F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D6F1C9841BC7E763007B0C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6F1C9871BC7E763007B0C7F /* WeChatDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeChatDemo.xcdatamodel; sourceTree = "<group>"; };
 		D6F1C9891BC7E763007B0C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D6F1C98C1BC7E763007B0C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6F1C98E1BC7E763007B0C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +39,139 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6433D251BC9075E00864680 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D6433D261BC9075E00864680 /* TabbarController.h */,
+				D6433D271BC9075E00864680 /* TabbarController.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D6433D281BC9075E00864680 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				D6433D291BC9075E00864680 /* Controller */,
+				D6433D2A1BC9075E00864680 /* Model */,
+				D6433D2B1BC9075E00864680 /* View */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		D6433D291BC9075E00864680 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6433D2A1BC9075E00864680 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6433D2B1BC9075E00864680 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6433D2C1BC9075E00864680 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				D6433D2D1BC9075E00864680 /* Controller */,
+				D6433D2E1BC9075E00864680 /* Model */,
+				D6433D2F1BC9075E00864680 /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		D6433D2D1BC9075E00864680 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6433D2E1BC9075E00864680 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6433D2F1BC9075E00864680 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6433D301BC9075E00864680 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D6433D311BC9075E00864680 /* Controller */,
+				D6433D321BC9075E00864680 /* Model */,
+				D6433D331BC9075E00864680 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D6433D311BC9075E00864680 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6433D321BC9075E00864680 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6433D331BC9075E00864680 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6433D341BC9075E00864680 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				D6433D351BC9075E00864680 /* Controller */,
+				D6433D361BC9075E00864680 /* Model */,
+				D6433D371BC9075E00864680 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		D6433D351BC9075E00864680 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6433D361BC9075E00864680 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6433D371BC9075E00864680 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D6F1C96E1BC7E763007B0C7F = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +191,15 @@
 		D6F1C9791BC7E763007B0C7F /* WeChatDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D6433D251BC9075E00864680 /* Common */,
+				D6433D281BC9075E00864680 /* Contacts */,
+				D6433D2C1BC9075E00864680 /* Discover */,
+				D6433D301BC9075E00864680 /* Home */,
+				D6433D341BC9075E00864680 /* Me */,
 				D6F1C97D1BC7E763007B0C7F /* AppDelegate.h */,
 				D6F1C97E1BC7E763007B0C7F /* AppDelegate.m */,
-				D6F1C9801BC7E763007B0C7F /* ViewController.h */,
-				D6F1C9811BC7E763007B0C7F /* ViewController.m */,
 				D6F1C9831BC7E763007B0C7F /* Main.storyboard */,
 				D6F1C9891BC7E763007B0C7F /* Assets.xcassets */,
-				D6F1C98B1BC7E763007B0C7F /* LaunchScreen.storyboard */,
 				D6F1C98E1BC7E763007B0C7F /* Info.plist */,
 				D6F1C9861BC7E763007B0C7F /* WeChatDemo.xcdatamodeld */,
 				D6F1C97A1BC7E763007B0C7F /* Supporting Files */,
@@ -139,7 +272,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6F1C98D1BC7E763007B0C7F /* LaunchScreen.storyboard in Resources */,
 				D6F1C98A1BC7E763007B0C7F /* Assets.xcassets in Resources */,
 				D6F1C9851BC7E763007B0C7F /* Main.storyboard in Resources */,
 			);
@@ -153,7 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6F1C9881BC7E763007B0C7F /* WeChatDemo.xcdatamodeld in Sources */,
-				D6F1C9821BC7E763007B0C7F /* ViewController.m in Sources */,
+				D6433D381BC9075E00864680 /* TabbarController.m in Sources */,
 				D6F1C97F1BC7E763007B0C7F /* AppDelegate.m in Sources */,
 				D6F1C97C1BC7E763007B0C7F /* main.m in Sources */,
 			);
@@ -168,14 +300,6 @@
 				D6F1C9841BC7E763007B0C7F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D6F1C98B1BC7E763007B0C7F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6F1C98C1BC7E763007B0C7F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -265,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = WeChatDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meituan.WeChatDemo;
@@ -276,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = WeChatDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.meituan.WeChatDemo;
@@ -302,6 +428,7 @@
 				D6F1C9931BC7E763007B0C7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
