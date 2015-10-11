@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D6433D381BC9075E00864680 /* TabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6433D271BC9075E00864680 /* TabbarController.m */; settings = {ASSET_TAGS = (); }; };
+		D6433D3B1BC90DD000864680 /* ContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6433D3A1BC90DD000864680 /* ContactListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D6433D3E1BC90E0500864680 /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6433D3D1BC90E0500864680 /* ChatListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D6433D411BC90E2A00864680 /* DiscoverListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6433D401BC90E2A00864680 /* DiscoverListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D6433D441BC90E4200864680 /* MeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6433D431BC90E4200864680 /* MeListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D6433D471BC9161800864680 /* ContactItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D6433D461BC9161800864680 /* ContactItem.m */; settings = {ASSET_TAGS = (); }; };
 		D6F1C97C1BC7E763007B0C7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F1C97B1BC7E763007B0C7F /* main.m */; };
 		D6F1C97F1BC7E763007B0C7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F1C97E1BC7E763007B0C7F /* AppDelegate.m */; };
 		D6F1C9851BC7E763007B0C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F1C9831BC7E763007B0C7F /* Main.storyboard */; };
@@ -18,10 +23,20 @@
 /* Begin PBXFileReference section */
 		D6433D261BC9075E00864680 /* TabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarController.h; sourceTree = "<group>"; };
 		D6433D271BC9075E00864680 /* TabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarController.m; sourceTree = "<group>"; };
+		D6433D391BC90DD000864680 /* ContactListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListViewController.h; sourceTree = "<group>"; };
+		D6433D3A1BC90DD000864680 /* ContactListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListViewController.m; sourceTree = "<group>"; };
+		D6433D3C1BC90E0500864680 /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
+		D6433D3D1BC90E0500864680 /* ChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
+		D6433D3F1BC90E2A00864680 /* DiscoverListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverListViewController.h; sourceTree = "<group>"; };
+		D6433D401BC90E2A00864680 /* DiscoverListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverListViewController.m; sourceTree = "<group>"; };
+		D6433D421BC90E4200864680 /* MeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeListViewController.h; sourceTree = "<group>"; };
+		D6433D431BC90E4200864680 /* MeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeListViewController.m; sourceTree = "<group>"; };
+		D6433D451BC9161800864680 /* ContactItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactItem.h; sourceTree = "<group>"; };
+		D6433D461BC9161800864680 /* ContactItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactItem.m; sourceTree = "<group>"; };
 		D6F1C9771BC7E763007B0C7F /* WeChatDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChatDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F1C97B1BC7E763007B0C7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D6F1C97D1BC7E763007B0C7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D6F1C97E1BC7E763007B0C7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D6F1C97D1BC7E763007B0C7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		D6F1C97E1BC7E763007B0C7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		D6F1C9841BC7E763007B0C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6F1C9871BC7E763007B0C7F /* WeChatDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeChatDemo.xcdatamodel; sourceTree = "<group>"; };
 		D6F1C9891BC7E763007B0C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +57,8 @@
 		D6433D251BC9075E00864680 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D6F1C97D1BC7E763007B0C7F /* AppDelegate.h */,
+				D6F1C97E1BC7E763007B0C7F /* AppDelegate.m */,
 				D6433D261BC9075E00864680 /* TabbarController.h */,
 				D6433D271BC9075E00864680 /* TabbarController.m */,
 			);
@@ -61,6 +78,8 @@
 		D6433D291BC9075E00864680 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D6433D391BC90DD000864680 /* ContactListViewController.h */,
+				D6433D3A1BC90DD000864680 /* ContactListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -68,6 +87,8 @@
 		D6433D2A1BC9075E00864680 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D6433D451BC9161800864680 /* ContactItem.h */,
+				D6433D461BC9161800864680 /* ContactItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,6 +113,8 @@
 		D6433D2D1BC9075E00864680 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D6433D3F1BC90E2A00864680 /* DiscoverListViewController.h */,
+				D6433D401BC90E2A00864680 /* DiscoverListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -123,6 +146,8 @@
 		D6433D311BC9075E00864680 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D6433D3C1BC90E0500864680 /* ChatListViewController.h */,
+				D6433D3D1BC90E0500864680 /* ChatListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,6 +179,8 @@
 		D6433D351BC9075E00864680 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D6433D421BC90E4200864680 /* MeListViewController.h */,
+				D6433D431BC90E4200864680 /* MeListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,11 +223,8 @@
 				D6433D2C1BC9075E00864680 /* Discover */,
 				D6433D301BC9075E00864680 /* Home */,
 				D6433D341BC9075E00864680 /* Me */,
-				D6F1C97D1BC7E763007B0C7F /* AppDelegate.h */,
-				D6F1C97E1BC7E763007B0C7F /* AppDelegate.m */,
 				D6F1C9831BC7E763007B0C7F /* Main.storyboard */,
 				D6F1C9891BC7E763007B0C7F /* Assets.xcassets */,
-				D6F1C98E1BC7E763007B0C7F /* Info.plist */,
 				D6F1C9861BC7E763007B0C7F /* WeChatDemo.xcdatamodeld */,
 				D6F1C97A1BC7E763007B0C7F /* Supporting Files */,
 			);
@@ -210,6 +234,7 @@
 		D6F1C97A1BC7E763007B0C7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D6F1C98E1BC7E763007B0C7F /* Info.plist */,
 				D6F1C97B1BC7E763007B0C7F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -284,9 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6433D471BC9161800864680 /* ContactItem.m in Sources */,
+				D6433D411BC90E2A00864680 /* DiscoverListViewController.m in Sources */,
+				D6433D3E1BC90E0500864680 /* ChatListViewController.m in Sources */,
+				D6433D3B1BC90DD000864680 /* ContactListViewController.m in Sources */,
 				D6F1C9881BC7E763007B0C7F /* WeChatDemo.xcdatamodeld in Sources */,
 				D6433D381BC9075E00864680 /* TabbarController.m in Sources */,
 				D6F1C97F1BC7E763007B0C7F /* AppDelegate.m in Sources */,
+				D6433D441BC90E4200864680 /* MeListViewController.m in Sources */,
 				D6F1C97C1BC7E763007B0C7F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
