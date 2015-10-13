@@ -16,6 +16,7 @@
 @property (nonatomic, copy) NSString *nickName;
 @property (nonatomic, copy) NSString *markName;
 @property (nonatomic, strong) UIImage *avatar;
-@property (nonatomic, copy) NSString *prefix;
+@property (nonatomic, copy) NSString *moto;
+@property (nonatomic, copy) NSString *alif;
 
 @end

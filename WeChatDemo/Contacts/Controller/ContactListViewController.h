@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ContactItem.h"
+#import "ContactListCell.h"
+#import "NSString+Alif.h"
 
-@interface ContactListViewController : UITableViewController <UISearchDisplayDelegate>
+@interface ContactListViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableDictionary *contacts;
-@property (nonatomic, strong) NSArray *groups;
+@property (nonatomic, strong) NSMutableArray *groups;
 
 @end

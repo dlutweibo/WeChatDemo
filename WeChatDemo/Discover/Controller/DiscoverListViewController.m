@@ -16,12 +16,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setData];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+}
+
+- (void) setData {
+    DiscoverItem *item = [DiscoverItem new];
+    item.title = @"朋友圈";
+    item.image = [UIImage imageNamed:@"ff_IconShowAlbum.png"];
+    NSArray *array0 = [NSArray arrayWithObject:item];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    DiscoverItem *item1 = [DiscoverItem new];
+    item1.title = @"扫一扫";
+    item1.image = [UIImage imageNamed:@"ff_IconQRCode.png"];
+    DiscoverItem *item2 = [DiscoverItem new];
+    item2.title = @"摇一摇";
+    item2.image = [UIImage imageNamed:@"ff_IconShake.png"];
+    NSArray *array1 = [NSArray arrayWithObjects:item1, item2, nil];
+    
+    DiscoverItem *item3 = [DiscoverItem new];
+    item3.title = @"附近的人";
+    item3.image = [UIImage imageNamed:@"ff_IconLocationService.png"];
+    DiscoverItem *item4 = [DiscoverItem new];
+    item4.title = @"漂流瓶";
+    item4.image = [UIImage imageNamed:@"ff_IconBottle.png"];
+    NSArray *array2 = [NSArray arrayWithObjects:item3, item4, nil];
+    
+    DiscoverItem *item5 = [DiscoverItem new];
+    item5.title = @"购物";
+    item5.detail = @"京东商城";
+    item5.image = [UIImage imageNamed:@"ff_IconShop.png"];
+    DiscoverItem *item6 = [DiscoverItem new];
+    item6.title = @"游戏";
+    item6.image = [UIImage imageNamed:@"MoreGame.png"];
+    NSArray *array3 = [NSArray arrayWithObjects:item5, item6, nil];
+    
+    _discovers = [NSMutableArray arrayWithObjects:array0, array1, array2, array3, nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,25 +62,25 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return _discovers.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [_discovers[section] count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    DiscoverListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DiscoverListCell" forIndexPath:indexPath];
+    cell.item = [_discovers[indexPath.section] objectAtIndex:indexPath.row];
     // Configure the cell...
     
     return cell;
 }
-*/
 
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 10;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

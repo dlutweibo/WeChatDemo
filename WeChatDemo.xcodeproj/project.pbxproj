@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D61FC1671BCB635400D296AA /* ContactListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61FC1661BCB635400D296AA /* ContactListCell.m */; settings = {ASSET_TAGS = (); }; };
+		D61FC1711BCB8D5C00D296AA /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D61FC1691BCB8D5C00D296AA /* 1.png */; settings = {ASSET_TAGS = (); }; };
+		D61FC1721BCB8D5C00D296AA /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D61FC16A1BCB8D5C00D296AA /* 2.png */; settings = {ASSET_TAGS = (); }; };
+		D61FC1731BCB8D5C00D296AA /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = D61FC16B1BCB8D5C00D296AA /* 3.png */; settings = {ASSET_TAGS = (); }; };
+		D61FC1741BCB8D5C00D296AA /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = D61FC16C1BCB8D5C00D296AA /* 4.png */; settings = {ASSET_TAGS = (); }; };
+		D61FC1751BCB8D5C00D296AA /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = D61FC16D1BCB8D5C00D296AA /* 5.png */; settings = {ASSET_TAGS = (); }; };
+		D61FC1761BCB8D5C00D296AA /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = D61FC16E1BCB8D5C00D296AA /* 6.png */; settings = {ASSET_TAGS = (); }; };
+		D61FC1771BCB8D5C00D296AA /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = D61FC16F1BCB8D5C00D296AA /* 7.png */; settings = {ASSET_TAGS = (); }; };
+		D61FC1781BCB8D5C00D296AA /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = D61FC1701BCB8D5C00D296AA /* 8.png */; settings = {ASSET_TAGS = (); }; };
+		D61FC17F1BCB9FF800D296AA /* NSString+Alif.m in Sources */ = {isa = PBXBuildFile; fileRef = D61FC17E1BCB9FF800D296AA /* NSString+Alif.m */; settings = {ASSET_TAGS = (); }; };
+		D61FC1821BCBA88400D296AA /* AddContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D61FC1811BCBA88400D296AA /* AddContactListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D61FC1851BCBBA3000D296AA /* ChatItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D61FC1841BCBBA3000D296AA /* ChatItem.m */; settings = {ASSET_TAGS = (); }; };
+		D61FC1881BCBBB2E00D296AA /* ChatListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61FC1871BCBBB2E00D296AA /* ChatListCell.m */; settings = {ASSET_TAGS = (); }; };
+		D61FC18B1BCBD6ED00D296AA /* DiscoverListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D61FC18A1BCBD6ED00D296AA /* DiscoverListCell.m */; settings = {ASSET_TAGS = (); }; };
+		D61FC1911BCBDCC100D296AA /* DiscoverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D61FC1901BCBDCC100D296AA /* DiscoverItem.m */; settings = {ASSET_TAGS = (); }; };
 		D6433D381BC9075E00864680 /* TabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6433D271BC9075E00864680 /* TabbarController.m */; settings = {ASSET_TAGS = (); }; };
 		D6433D3B1BC90DD000864680 /* ContactListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6433D3A1BC90DD000864680 /* ContactListViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D6433D3E1BC90E0500864680 /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6433D3D1BC90E0500864680 /* ChatListViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -21,6 +36,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D61FC1651BCB635400D296AA /* ContactListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListCell.h; sourceTree = "<group>"; };
+		D61FC1661BCB635400D296AA /* ContactListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListCell.m; sourceTree = "<group>"; };
+		D61FC1691BCB8D5C00D296AA /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		D61FC16A1BCB8D5C00D296AA /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		D61FC16B1BCB8D5C00D296AA /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		D61FC16C1BCB8D5C00D296AA /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		D61FC16D1BCB8D5C00D296AA /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		D61FC16E1BCB8D5C00D296AA /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		D61FC16F1BCB8D5C00D296AA /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		D61FC1701BCB8D5C00D296AA /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		D61FC17D1BCB9FF800D296AA /* NSString+Alif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Alif.h"; sourceTree = "<group>"; };
+		D61FC17E1BCB9FF800D296AA /* NSString+Alif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Alif.m"; sourceTree = "<group>"; };
+		D61FC1801BCBA88400D296AA /* AddContactListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactListViewController.h; sourceTree = "<group>"; };
+		D61FC1811BCBA88400D296AA /* AddContactListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactListViewController.m; sourceTree = "<group>"; };
+		D61FC1831BCBBA3000D296AA /* ChatItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatItem.h; sourceTree = "<group>"; };
+		D61FC1841BCBBA3000D296AA /* ChatItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatItem.m; sourceTree = "<group>"; };
+		D61FC1861BCBBB2E00D296AA /* ChatListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListCell.h; sourceTree = "<group>"; };
+		D61FC1871BCBBB2E00D296AA /* ChatListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListCell.m; sourceTree = "<group>"; };
+		D61FC1891BCBD6ED00D296AA /* DiscoverListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverListCell.h; sourceTree = "<group>"; };
+		D61FC18A1BCBD6ED00D296AA /* DiscoverListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverListCell.m; sourceTree = "<group>"; };
+		D61FC18F1BCBDCC100D296AA /* DiscoverItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverItem.h; sourceTree = "<group>"; };
+		D61FC1901BCBDCC100D296AA /* DiscoverItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverItem.m; sourceTree = "<group>"; };
 		D6433D261BC9075E00864680 /* TabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarController.h; sourceTree = "<group>"; };
 		D6433D271BC9075E00864680 /* TabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarController.m; sourceTree = "<group>"; };
 		D6433D391BC90DD000864680 /* ContactListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListViewController.h; sourceTree = "<group>"; };
@@ -54,9 +91,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D61FC1531BCB50DE00D296AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D61FC18C1BCBDB3E00D296AA /* plist */,
+				D61FC1681BCB8D5C00D296AA /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D61FC1681BCB8D5C00D296AA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D61FC1691BCB8D5C00D296AA /* 1.png */,
+				D61FC16A1BCB8D5C00D296AA /* 2.png */,
+				D61FC16B1BCB8D5C00D296AA /* 3.png */,
+				D61FC16C1BCB8D5C00D296AA /* 4.png */,
+				D61FC16D1BCB8D5C00D296AA /* 5.png */,
+				D61FC16E1BCB8D5C00D296AA /* 6.png */,
+				D61FC16F1BCB8D5C00D296AA /* 7.png */,
+				D61FC1701BCB8D5C00D296AA /* 8.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		D61FC1791BCB9F0B00D296AA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D61FC17D1BCB9FF800D296AA /* NSString+Alif.h */,
+				D61FC17E1BCB9FF800D296AA /* NSString+Alif.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D61FC18C1BCBDB3E00D296AA /* plist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = plist;
+			sourceTree = "<group>";
+		};
 		D6433D251BC9075E00864680 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D61FC1791BCB9F0B00D296AA /* Category */,
 				D6F1C97D1BC7E763007B0C7F /* AppDelegate.h */,
 				D6F1C97E1BC7E763007B0C7F /* AppDelegate.m */,
 				D6433D261BC9075E00864680 /* TabbarController.h */,
@@ -80,6 +158,8 @@
 			children = (
 				D6433D391BC90DD000864680 /* ContactListViewController.h */,
 				D6433D3A1BC90DD000864680 /* ContactListViewController.m */,
+				D61FC1801BCBA88400D296AA /* AddContactListViewController.h */,
+				D61FC1811BCBA88400D296AA /* AddContactListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -96,6 +176,8 @@
 		D6433D2B1BC9075E00864680 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D61FC1651BCB635400D296AA /* ContactListCell.h */,
+				D61FC1661BCB635400D296AA /* ContactListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +204,8 @@
 		D6433D2E1BC9075E00864680 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D61FC18F1BCBDCC100D296AA /* DiscoverItem.h */,
+				D61FC1901BCBDCC100D296AA /* DiscoverItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +213,8 @@
 		D6433D2F1BC9075E00864680 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D61FC1891BCBD6ED00D296AA /* DiscoverListCell.h */,
+				D61FC18A1BCBD6ED00D296AA /* DiscoverListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +241,8 @@
 		D6433D321BC9075E00864680 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D61FC1831BCBBA3000D296AA /* ChatItem.h */,
+				D61FC1841BCBBA3000D296AA /* ChatItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +250,8 @@
 		D6433D331BC9075E00864680 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D61FC1861BCBBB2E00D296AA /* ChatListCell.h */,
+				D61FC1871BCBBB2E00D296AA /* ChatListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +313,7 @@
 				D6433D2C1BC9075E00864680 /* Discover */,
 				D6433D301BC9075E00864680 /* Home */,
 				D6433D341BC9075E00864680 /* Me */,
+				D61FC1531BCB50DE00D296AA /* Resources */,
 				D6F1C9831BC7E763007B0C7F /* Main.storyboard */,
 				D6F1C9891BC7E763007B0C7F /* Assets.xcassets */,
 				D6F1C9861BC7E763007B0C7F /* WeChatDemo.xcdatamodeld */,
@@ -297,7 +388,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D61FC1711BCB8D5C00D296AA /* 1.png in Resources */,
+				D61FC1781BCB8D5C00D296AA /* 8.png in Resources */,
+				D61FC1751BCB8D5C00D296AA /* 5.png in Resources */,
+				D61FC1771BCB8D5C00D296AA /* 7.png in Resources */,
+				D61FC1721BCB8D5C00D296AA /* 2.png in Resources */,
+				D61FC1741BCB8D5C00D296AA /* 4.png in Resources */,
+				D61FC1731BCB8D5C00D296AA /* 3.png in Resources */,
 				D6F1C98A1BC7E763007B0C7F /* Assets.xcassets in Resources */,
+				D61FC1761BCB8D5C00D296AA /* 6.png in Resources */,
 				D6F1C9851BC7E763007B0C7F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,13 +410,20 @@
 			files = (
 				D6433D471BC9161800864680 /* ContactItem.m in Sources */,
 				D6433D411BC90E2A00864680 /* DiscoverListViewController.m in Sources */,
+				D61FC1671BCB635400D296AA /* ContactListCell.m in Sources */,
+				D61FC17F1BCB9FF800D296AA /* NSString+Alif.m in Sources */,
 				D6433D3E1BC90E0500864680 /* ChatListViewController.m in Sources */,
+				D61FC1821BCBA88400D296AA /* AddContactListViewController.m in Sources */,
 				D6433D3B1BC90DD000864680 /* ContactListViewController.m in Sources */,
+				D61FC1911BCBDCC100D296AA /* DiscoverItem.m in Sources */,
 				D6F1C9881BC7E763007B0C7F /* WeChatDemo.xcdatamodeld in Sources */,
 				D6433D381BC9075E00864680 /* TabbarController.m in Sources */,
+				D61FC18B1BCBD6ED00D296AA /* DiscoverListCell.m in Sources */,
 				D6F1C97F1BC7E763007B0C7F /* AppDelegate.m in Sources */,
 				D6433D441BC90E4200864680 /* MeListViewController.m in Sources */,
+				D61FC1851BCBBA3000D296AA /* ChatItem.m in Sources */,
 				D6F1C97C1BC7E763007B0C7F /* main.m in Sources */,
+				D61FC1881BCBBB2E00D296AA /* ChatListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
