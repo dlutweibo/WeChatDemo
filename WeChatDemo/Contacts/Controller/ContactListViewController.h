@@ -10,10 +10,18 @@
 #import "ContactItem.h"
 #import "ContactListCell.h"
 #import "NSString+Alif.h"
+#import "UIColor+myColor.h"
+#import "DemoTool.h"
+
+#define WIDTH_SCREEN        [UIScreen mainScreen].bounds.size.width
+#define HEIGHT_SCREEN       [UIScreen mainScreen].bounds.size.height
 
 @interface ContactListViewController : UITableViewController
 
-@property (nonatomic, strong) NSMutableDictionary *contacts;
-@property (nonatomic, strong) NSMutableArray *groups;
+@property (nonatomic, strong) NSMutableArray *metaData;
+@property (nonatomic, strong) NSMutableArray *contacts;
+@property (nonatomic, strong) NSMutableArray *functions;
+@property (nonatomic, strong) NSArray *groups;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

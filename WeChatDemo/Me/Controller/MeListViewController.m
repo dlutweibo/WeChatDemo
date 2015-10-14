@@ -16,12 +16,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setData];
+}
+
+- (void) setData {
+    User *item = [User new];
+    item.nickName = @"我是昵称";
+    item.ID = @"**************";
+//    item.avatar = [UIImage imageNamed:@"1.png"];
+    NSArray *array0 = [NSArray arrayWithObject:item];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    DiscoverItem *item1 = [DiscoverItem new];
+    item1.title = @"相册";
+    item1.image = [UIImage imageNamed:@"MoreMyAlbum.png"];
+    DiscoverItem *item2 = [DiscoverItem new];
+    item2.title = @"收藏";
+    item2.image = [UIImage imageNamed:@"MoreMyFavorites.png"];
+    NSArray *array1 = [NSArray arrayWithObjects:item1, item2, nil];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    DiscoverItem *item3 = [DiscoverItem new];
+    item3.title = @"钱包";
+    item3.image = [UIImage imageNamed:@"MoreMyBankCard.png"];
+    DiscoverItem *item4 = [DiscoverItem new];
+    item4.title = @"卡包";
+    item4.image = [UIImage imageNamed:@"MyCardPackageIcon.png"];
+    NSArray *array2 = [NSArray arrayWithObjects:item3, item4, nil];
+    
+    DiscoverItem *item5 = [DiscoverItem new];
+    item5.title = @"表情";
+    item5.image = [UIImage imageNamed:@"MoreExpressionShops.png"];
+    NSArray *array3 = [NSArray arrayWithObject:item5];
+    
+    DiscoverItem *item6 = [DiscoverItem new];
+    item6.title = @"设置";
+    item6.image = [UIImage imageNamed:@"MoreSetting.png"];
+    NSArray *array4 = [NSArray arrayWithObject:item6];
+    
+    _datas = [NSArray arrayWithObjects:array0, array1, array2, array3, array4, nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,25 +63,40 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return _datas.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [_datas[section] count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    if (indexPath.section == 0) {
+        MeListUserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MeListUserCell" forIndexPath:indexPath];
+        cell.user = [_datas[indexPath.section] objectAtIndex:indexPath.row];
+        return cell;
+    }
+     MeListFunctionCell*cell = [tableView dequeueReusableCellWithIdentifier:@"MeListFunctionCell" forIndexPath:indexPath];
+    cell.item = [_datas[indexPath.section] objectAtIndex:indexPath.row];
     
     // Configure the cell...
     
     return cell;
 }
-*/
 
+#pragma mark - Table view delegate
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return 90;
+    }
+    return 44;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 8;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

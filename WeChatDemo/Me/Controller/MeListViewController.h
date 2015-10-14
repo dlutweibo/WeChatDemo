@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+#import "DiscoverItem.h"
+#import "MeListUserCell.h"
+#import "MeListFunctionCell.h"
 
 @interface MeListViewController : UITableViewController
+
+@property (nonatomic, strong) NSArray *datas;
 
 @end

@@ -15,7 +15,7 @@
     CFStringTransform((CFMutableStringRef) str, NULL, kCFStringTransformMandarinLatin, NO);
     CFStringTransform((CFMutableStringRef) str, NULL, kCFStringTransformStripDiacritics, NO);
     NSString *alif = [str capitalizedString];
-    return [alif substringToIndex:1];
+    return alif;
 }
 
 @end

@@ -11,6 +11,7 @@
 @implementation DiscoverListCell
 
 - (void) setItem:(DiscoverItem *)item{
+    _item = item;
     self.textLabel.text = item.title;
     self.detailTextLabel.text = item.detail;
     self.imageView.image = item.image;

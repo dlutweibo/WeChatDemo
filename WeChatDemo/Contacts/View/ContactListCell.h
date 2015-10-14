@@ -12,5 +12,7 @@
 @interface ContactListCell : UITableViewCell
 
 @property (nonatomic, strong) ContactItem *contact;
+@property (weak, nonatomic) IBOutlet UILabel *markNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarView;
 
 @end

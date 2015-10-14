@@ -11,10 +11,9 @@
 @implementation ContactListCell
 
 - (void) setContact:(ContactItem *)contact{
-    self.imageView.image = contact.avatar;
-    self.textLabel.text = contact.markName;
-    self.detailTextLabel.text = contact.moto;
-    [self.detailTextLabel setFont:[UIFont systemFontOfSize:12]];
+    _contact = contact;
+    _avatarView.image = contact.avatar;
+    _markNameLabel.text = contact.markName;
 }
 
 @end
