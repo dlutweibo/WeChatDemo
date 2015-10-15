@@ -25,6 +25,18 @@
     _functions = [[NSMutableArray alloc] init];
     [self setLabelTags];
     [self loadContacts];
+    [self setFooterView];
+}
+
+- (void) setFooterView {
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, WIDTH_SCREEN, 49.0f)];
+    [label setFont:[UIFont systemFontOfSize:14.5]];
+    [label setBackgroundColor:[UIColor headerColor]];
+    [label setTextColor:[UIColor grayColor]];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [label setText:[NSString stringWithFormat:@"共有%lu个联系人", [_metaData count]]];
+    [self.tableView setTableFooterView:label];
 }
 
 - (void) setLabelTags{
@@ -76,30 +88,6 @@
         return 0;
     }
     return 20.0f;
-}
-
-- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    if (section == _groups.count - 1) {
-        return 49.0f;
-    }
-    return 0.0f;
-}
-
-
-- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    if (section == _groups.count - 1) {
-        id label = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"footerView"];
-        if (label == nil) {
-            label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, WIDTH_SCREEN, 49.0f)];
-            [label setFont:[UIFont systemFontOfSize:14.5]];
-            [label setBackgroundColor:[UIColor headerColor]];
-            [label setTextColor:[UIColor grayColor]];
-            [label setTextAlignment:NSTextAlignmentCenter];
-            [label setText:[NSString stringWithFormat:@"共有%lu个联系人", [_metaData count]]];
-        }
-        return label;
-    }
-    return nil;
 }
 
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
