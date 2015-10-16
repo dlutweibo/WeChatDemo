@@ -8,7 +8,7 @@
 
 #import "ContactListViewController.h"
 
-@interface ContactListViewController ()
+@interface ContactListViewController ()<UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
 
 @end
 
@@ -18,14 +18,33 @@
     [super viewDidLoad];
     [self.tableView setSectionIndexBackgroundColor:[UIColor clearColor]];
     [self.tableView setSectionIndexColor:[UIColor blackColor]];
-    //[self.tableView setSectionFooterHeight:0];
-    [_searchBar.layer setBorderWidth:0.5];
-    [_searchBar.layer setBorderColor:[UIColor headerColor].CGColor];
+    [self setSearchVC];
     _metaData = [[NSMutableArray alloc] init];
     _functions = [[NSMutableArray alloc] init];
     [self setLabelTags];
     [self loadContacts];
     [self setFooterView];
+}
+
+- (void) setSearchVC {
+    _resultVC = [[ContactsSearchResultsController alloc] init];
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:_resultVC];
+    _searchController.searchResultsUpdater = self;
+    [_searchController.searchBar sizeToFit];
+    [_searchController.searchBar.layer setBorderWidth:0.5];
+    [_searchController.searchBar.layer setBorderColor:[UIColor headerColor].CGColor];
+    [_searchController.searchBar setBarTintColor:[UIColor headerColor]];
+    [_searchController.searchBar setPlaceholder:@"搜索"];
+    self.searchController.searchBar.scopeButtonTitles = @[NSLocalizedString(@"ScopeButtonCountry",@"Country"),
+                                                          NSLocalizedString(@"ScopeButtonCapital",@"Capital")];
+    _searchController.searchBar.delegate = self;
+    [self.tableView setTableHeaderView:_searchController.searchBar];
+    
+    //_resultVC.tableView.delegate = self;
+    _searchController.delegate = self;
+    //_searchController.dimsBackgroundDuringPresentation = NO;
+    //_searchController.hidesNavigationBarDuringPresentation = YES;
+    self.definesPresentationContext = YES;
 }
 
 - (void) setFooterView {
@@ -62,7 +81,7 @@
  }
 
 - (void) loadContacts {
-    NSArray *testName = @[@"赵", @"钱", @"孙", @"李", @"周", @"吴", @"郑", @"王", @"冯", @"陈", @"啊", @"贝"];
+    NSArray *testName = @[@"赵", @"#", @"孙", @"李", @"周", @"W", @"郑", @"王", @"冯", @"C", @"啊", @"贝"];
     for (int i = 0; i < 20; i++) {
         ContactItem *item = [ContactItem new];
         item.nickName = item.markName = [NSString stringWithFormat:@"%@ %d",testName[arc4random() % 12], arc4random() % 12];
@@ -143,14 +162,13 @@
 
 - (NSInteger) tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
     if (index == 0) {
-        [self.tableView scrollRectToVisible:_searchBar.frame animated:NO];
+        [self.tableView scrollRectToVisible:self.tableView.tableHeaderView.frame animated:NO];
         return -1;
     }else{
         return index;
     }
 }
-
-// Override to support conditional editing of the table view.
+/*// Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     if (indexPath.section == 0) {
@@ -158,16 +176,16 @@
     }
     return YES;
 }
-
+*/
 
 
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+/*- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }  
-}
+}*/
 
 
 /*
@@ -193,5 +211,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma -mark search delegate
+
+- (void) updateSearchResultsForSearchController:(UISearchController *)searchController{
+//    NSString *searchText = searchController.searchBar.text;
+//    if (searchText.length == 0) {
+//        return;
+//    }
+//    ContactsSearchResultsController *results = (ContactsSearchResultsController *)_searchController.searchResultsController;
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.markName contains[c] %@", searchText];
+//    results.filteredContacts = [_contacts filteredArrayUsingPredicate:predicate];
+//    [results.tableView reloadData];
+}
 
 @end

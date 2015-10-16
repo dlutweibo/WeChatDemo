@@ -10,4 +10,8 @@
 
 @implementation AddContactListViewController
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 54.0f;
+}
+
 @end
