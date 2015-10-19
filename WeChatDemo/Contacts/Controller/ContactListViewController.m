@@ -8,7 +8,7 @@
 
 #import "ContactListViewController.h"
 
-@interface ContactListViewController ()<UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
+@interface ContactListViewController ()<UISearchBarDelegate, UISearchDisplayDelegate>
 
 @end
 
@@ -16,35 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_searchBar.layer setBorderWidth:0.5];
+    [_searchBar.layer setBorderColor:[UIColor headerColor].CGColor];
+    _searchDisplayController.searchResultsTableView.dataSource = self;
+    [_searchDisplayController.searchResultsTableView registerClass:[ContactListCell class] forCellReuseIdentifier:@"ContactListCell"];
+
     [self.tableView setSectionIndexBackgroundColor:[UIColor clearColor]];
     [self.tableView setSectionIndexColor:[UIColor blackColor]];
-    [self setSearchVC];
     _metaData = [[NSMutableArray alloc] init];
     _functions = [[NSMutableArray alloc] init];
     [self setLabelTags];
     [self loadContacts];
     [self setFooterView];
-}
-
-- (void) setSearchVC {
-    _resultVC = [[ContactsSearchResultsController alloc] init];
-    _searchController = [[UISearchController alloc] initWithSearchResultsController:_resultVC];
-    _searchController.searchResultsUpdater = self;
-    [_searchController.searchBar sizeToFit];
-    [_searchController.searchBar.layer setBorderWidth:0.5];
-    [_searchController.searchBar.layer setBorderColor:[UIColor headerColor].CGColor];
-    [_searchController.searchBar setBarTintColor:[UIColor headerColor]];
-    [_searchController.searchBar setPlaceholder:@"搜索"];
-    self.searchController.searchBar.scopeButtonTitles = @[NSLocalizedString(@"ScopeButtonCountry",@"Country"),
-                                                          NSLocalizedString(@"ScopeButtonCapital",@"Capital")];
-    _searchController.searchBar.delegate = self;
-    [self.tableView setTableHeaderView:_searchController.searchBar];
-    
-    //_resultVC.tableView.delegate = self;
-    _searchController.delegate = self;
-    //_searchController.dimsBackgroundDuringPresentation = NO;
-    //_searchController.hidesNavigationBarDuringPresentation = YES;
-    self.definesPresentationContext = YES;
 }
 
 - (void) setFooterView {
@@ -84,9 +67,13 @@
     NSArray *testName = @[@"赵", @"#", @"孙", @"李", @"周", @"W", @"郑", @"王", @"冯", @"C", @"啊", @"贝"];
     for (int i = 0; i < 20; i++) {
         ContactItem *item = [ContactItem new];
-        item.nickName = item.markName = [NSString stringWithFormat:@"%@ %d",testName[arc4random() % 12], arc4random() % 12];
-        item.alif = [NSString getPinYinAlif:item.markName];
+        item.nickName = item.markName = [NSString stringWithFormat:@"%@                   %d",testName[arc4random() % 12], arc4random() % 12];
+        item.ID = item.alif = [NSString getPinYinAlif:item.markName];
         item.avatar = [UIImage imageNamed:[NSString stringWithFormat:@"%d.png", 1 + arc4random() % 8]];
+        item.albumList = [NSMutableArray new];
+        [item.albumList addObject:item.avatar];
+        item.sex = YES;
+        item.tags = [NSMutableArray arrayWithObjects:@"wotian", @"zhende", @"zheshibiaoqian", nil];
         [_metaData addObject:item];
     }
     _contacts = [DemoTool getDataWithArray:_metaData];
@@ -128,10 +115,16 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if ([tableView isEqual:_searchDisplayController.searchResultsTableView]) {
+        return 1;
+    }
     return _groups.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if ([tableView isEqual:_searchDisplayController.searchResultsTableView]) {
+        return _filteredContacts.count;
+    }
     if (section == 0) {
         return [_functions count];
     }
@@ -141,13 +134,23 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     ContactListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactListCell"];
+    if ([tableView isEqual:_searchDisplayController.searchResultsTableView]) {
+
+        ContactListCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"ContactListCell"];
+            
+        ContactItem *item = [_filteredContacts objectAtIndex:indexPath.row];
+        [self configCell:cell1 withContact:item];
+        return cell1;
+    }
+    
     if (indexPath.section == 0) {
-        cell.contact = _functions[indexPath.row];
+        [self configCell:cell withContact:_functions[indexPath.row]];
     }else{
         NSArray *array = [_contacts objectAtIndex:indexPath.section - 1];
         ContactItem *item = [array objectAtIndex:indexPath.row];
-        cell.contact = item;
+        [self configCell:cell withContact:item];
     }
     
     
@@ -156,7 +159,25 @@
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([tableView isEqual:_searchDisplayController.searchResultsTableView]) {
+        NSLog(@"%lu", indexPath.row);
+    }else{
+        if (indexPath.section == 0) {
+            return;
+        }
+        UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        ContactDetailViewController *detailVC = [board instantiateViewControllerWithIdentifier:@"DetailController"];
+        detailVC.contact = [[tableView cellForRowAtIndexPath:indexPath] contact];
+        [self.navigationController pushViewController:detailVC animated:YES];
+        NSLog(@"%lu", indexPath.row);
+    }
+}
+
 - (NSArray *) sectionIndexTitlesForTableView: (UITableView *)tableView{
+    if ([tableView isEqual:_searchDisplayController.searchResultsTableView]) {
+        return nil;
+    }
     return _groups;
 }
 
@@ -213,15 +234,24 @@
 */
 #pragma -mark search delegate
 
-- (void) updateSearchResultsForSearchController:(UISearchController *)searchController{
-//    NSString *searchText = searchController.searchBar.text;
-//    if (searchText.length == 0) {
-//        return;
-//    }
-//    ContactsSearchResultsController *results = (ContactsSearchResultsController *)_searchController.searchResultsController;
-//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.markName contains[c] %@", searchText];
-//    results.filteredContacts = [_contacts filteredArrayUsingPredicate:predicate];
-//    [results.tableView reloadData];
+- (void) configCell:(ContactListCell *)cell withContact:(ContactItem *)contact{
+    cell.contact = contact;
+    cell.avatarView.image = contact.avatar;
+    cell.markNameLabel.text = contact.markName;
+}
+
+- (BOOL) searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString{
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF.markName contains[c] %@", searchString];
+    _filteredContacts = [_metaData filteredArrayUsingPredicate:pred];
+    return YES;
+}
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller {
+    [self.tabBarController.tabBar setHidden:YES];
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller{
+    [self.tabBarController.tabBar setHidden:NO];
 }
 
 @end

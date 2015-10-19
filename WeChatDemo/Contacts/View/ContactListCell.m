@@ -10,10 +10,4 @@
 
 @implementation ContactListCell
 
-- (void) setContact:(ContactItem *)contact{
-    _contact = contact;
-    _avatarView.image = contact.avatar;
-    _markNameLabel.text = contact.markName;
-}
-
 @end

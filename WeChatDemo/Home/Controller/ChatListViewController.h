@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIColor+myColor.h"
 
 @interface ChatListViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

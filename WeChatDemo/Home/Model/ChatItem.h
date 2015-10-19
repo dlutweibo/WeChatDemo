@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ChatItem : NSObject
+
+@property (nonatomic, copy) NSString *time;
+@property (nonatomic, strong) NSMutableArray *messageList;
 
 @end

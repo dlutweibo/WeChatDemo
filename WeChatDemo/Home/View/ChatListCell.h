@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChatItem.h"
 
 @interface ChatListCell : UITableViewCell
+
+@property (nonatomic, strong) ChatItem *chat;
+
+@property (weak, nonatomic) IBOutlet UIImageView *avatarView;
+@property (weak, nonatomic) IBOutlet UILabel *markNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *notPushImageView;
 
 @end

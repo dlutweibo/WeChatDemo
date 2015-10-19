@@ -19,5 +19,11 @@
 @property (nonatomic, strong) UIImage *avatar;
 @property (nonatomic, copy) NSString *moto;
 @property (nonatomic, copy) NSString *alif;
+@property (nonatomic, copy) NSString *address;
+@property (nonatomic, strong) NSMutableArray *albumList;
+@property (nonatomic, getter=isMark) BOOL mark;
+@property (nonatomic, getter=isStar) BOOL star;
+@property (nonatomic, strong) NSMutableArray *tags;
+@property (nonatomic, strong) NSMutableArray *more;
 
 @end

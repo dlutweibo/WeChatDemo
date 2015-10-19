@@ -11,7 +11,7 @@
 
 @interface User : ContactItem
 
-@property (nonatomic, strong) NSMutableArray *address;
+@property (nonatomic, strong) NSMutableArray *addresses;
 @property (nonatomic, copy) NSString *phoneNumber;
 
 @end
